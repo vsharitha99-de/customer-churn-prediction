@@ -25,14 +25,15 @@ Tested feature selection by dropping age, gender, country, annual_income, member
 Model Building & Performance
 Applied 7 classification algorithms with RandomizedSearchCV tuning, cv=5, scoring='roc_auc'. Trained on SMOTE-balanced data, tested on original imbalanced y_test:
 
-Model	Accuracy	Precision (Churn)	Recall (Churn)	F1-Score (Churn)
-KNeighborsClassifier	0.70	0.21	0.63	0.32
-SVC	0.79	0.23	0.38	0.29
-GaussianNB	0.63	0.20	0.80	0.32
-DecisionTreeClassifier	0.79	0.23	0.40	0.29
-RandomForestClassifier	0.84	0.32	0.40	0.35
-AdaBoostClassifier	0.80	0.30	0.63	0.41
-XGBoostClassifier	0.86	0.30	0.23	0.26
+| Model | Accuracy | Precision (Churn) | Recall (Churn) | F1-Score (Churn) |
+| :--- | :---: | :---: | :---: | :---: |
+| **KNeighborsClassifier** | 0.70 | 0.21 | 0.63 | 0.32 |
+| **SVC** | 0.79 | 0.23 | 0.38 | 0.29 |
+| **GaussianNB** | 0.63 | 0.20 | **0.80** | 0.32 |
+| **DecisionTreeClassifier** | 0.79 | 0.23 | 0.40 | 0.29 |
+| **RandomForestClassifier** | 0.84 | **0.32** | 0.40 | 0.35 |
+| **AdaBoostClassifier** | 0.80 | 0.30 | 0.63 | **0.41** |
+| **XGBoostClassifier** | **0.86** | 0.30 | 0.23 | 0.26 |
 
 Best Model for Churn Detection: AdaBoostClassifier
 F1-Score = 0.41 and Recall = 63% for churn class
